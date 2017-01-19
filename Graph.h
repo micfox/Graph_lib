@@ -27,6 +27,7 @@ struct Color {
 	Color(Color_type cc) :c(Fl_Color(cc)), v(visible) { }
 	Color(Color_type cc, Transparency vv) :c(Fl_Color(cc)), v(vv) { }
 	Color(int cc) :c(Fl_Color(cc)), v(visible) { }
+	Color(int r, int g, int b) :c{ fl_rgb_color(r, g, b) }, v{visible} { }
 	Color(Transparency vv) :c(Fl_Color()), v(vv) { }
 
 	int as_int() const { return c; }
