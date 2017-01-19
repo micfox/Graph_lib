@@ -1,7 +1,7 @@
 #include "Simple_window.h"
 #include "Graph.h"
 #include "Arc.h"
-#include "Box.h"
+#include "regular_hexagon.h"
 
 int main()
 {
@@ -9,8 +9,9 @@ int main()
 	Point tl {100,100};
 	Simple_window win {tl,600,400,"test"};
 
-	Box foo {{50,50}, 200, 200, 50};
-	foo.set_color(Color::red);
+	Regular_hexagon foo {{200,200}, 50};
+	foo.set_fill_color (Color::white);
+	foo.set_color(Color::invisible);
 	win.attach(foo);
 	win.wait_for_button();
 }
