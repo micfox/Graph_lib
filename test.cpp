@@ -1,7 +1,7 @@
 #include "Simple_window.h"
 #include "Graph.h"
 #include "Arc.h"
-#include "regular_hexagon.h"
+#include "Regular_hexagon.h"
 
 int main()
 {
