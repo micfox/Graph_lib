@@ -1,14 +1,21 @@
 #include "Simple_window.h"
 #include "Graph.h"
 #include "Regular_hexagon.h"
+#include <cmath>
 
+#define PI 3.14159265
 Point p {0,0};
 int r = 50;
 
 void get_next_point()
 //get position for next hexagon
 {
-	p.y += 2 * sin60 * r;
+	int d = static_cast<int> (rount (2 * r * sin (60 * PI /180)));
+	p.y += d;
+	if ( (p.y - r) > win.y_max() ) {
+		p.x += d;
+		p.y = //if odd col, y add a shift, if even col, y = 0
+	}  
 }
 
 int main()
