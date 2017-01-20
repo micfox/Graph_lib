@@ -337,6 +337,7 @@ struct Marks : Marked_polyline {
 
 struct Mark : Marks {
 	Mark(Point xy, char c) : Marks(string(1,c)) {add(xy); }
+	void set_mark_point(Point p) { Shape::set_point(0, p); }
 };
 
 /*
