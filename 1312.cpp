@@ -14,14 +14,19 @@ int main()
 	Circle c {center, radius};
 	win.attach(c);
 
-	Point p {radius, 0};
+	Point p {center.x + radius, center.y};
 	Mark m {p, 'o'};
+	win.attach(m);
+
 	for (int i=0; true; i+=10) {
 		win.wait_for_button();
-		m.set_point(0, Point {
-			center.x + radius * cos ((i+10) * PI / 180 ),
-			center.y - radius * sin ((i+10) * PI / 180)
+		m.set_mark_point(Point {
+			center.x + (int) round (radius * cos ((i+10) * PI / 180)),
+			center.y - (int) round (radius * sin ((i+10) * PI / 180))
 		});		
+		win.attach(m);
 	}
+
+	win.wait_for_button();
 
 }
