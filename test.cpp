@@ -1,7 +1,6 @@
 #include "Simple_window.h"
 #include "Graph.h"
-#include "Arc.h"
-#include "Regular_hexagon.h"
+#include "Poly.h"
 
 int main()
 {
@@ -9,7 +8,7 @@ int main()
 	Point tl {100,100};
 	Simple_window win {tl,600,400,"test"};
 
-	Regular_hexagon foo {{200,200}, 50};
+	Poly foo {{200,200}, {133,392}, {362,96}};
 	foo.set_fill_color (Color::white);
 	foo.set_color(Color::invisible);
 	win.attach(foo);
