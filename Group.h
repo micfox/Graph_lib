@@ -1,6 +1,5 @@
 namespace Graph_lib {
 struct Group : Shape {
-public:
 //	Group() {}
 /*
 //dunno how to use initlist
@@ -9,16 +8,19 @@ public:
 			shapes.push_back(s);
 	}
 */
-	void draw() const {
-		for (int i=0; i < shapes.size(); ++i)
-			shapes[i].draw();	
+	//override
+	void draw_lines() const {
+		for (int i=0; i < shapes.size(); ++i) 
+			shapes[i].draw();
 	}
+
 	void add(Shape& s) {shapes.push_back(s);}
 	void move(int x, int y) {
 		for (int i=0; i < shapes.size(); ++i)
 			shapes[i].move(x, y);
 	}	
 	void set_color(Color c) {
+		cout << "calling Group::set_color(c)" << '\n';
 		for (int i=0; i < shapes.size(); ++i)
 			shapes[i].set_color(c);
 	}
