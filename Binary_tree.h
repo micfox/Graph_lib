@@ -43,10 +43,12 @@ struct Binary_tree : Shape {
 		}
 	}
 private:
-	vector<Point> np;	//keep all nodes positions
-	Lines line_shapes;
 	int xshift = 256;
 	const int yshift = 30;
 	int lvl = 0;
+protected:
+	Lines line_shapes;
+	vector<Point> np;	//keep all nodes positions
 };
 }
+
