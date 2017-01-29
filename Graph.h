@@ -129,6 +129,7 @@ public:
 	void draw() const;					// deal with color and draw_lines
 protected:
 	virtual void draw_lines() const;	// simply draw the appropriate lines
+	void clear_points() {points.clear();}
 public:
 	virtual void move(int dx, int dy);	// move the shape +=dx and +=dy
 
